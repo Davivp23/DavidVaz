@@ -1,21 +1,13 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import Header from './components/Header';
-import About from './components/About';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
+import { Routes, Route } from 'react-router-dom';
+import Home from './components/Home';
+import ProjectDetail from './components/ProjectDetail';
 
-function App() {
+export default function App() {
   return (
-    <div className="bg-[#0d1117] text-white min-h-screen font-sans">
-      <Header />
-      <main className="px-4 md:px-16">
-        <About />
-        <Projects />
-        <Contact />
-      </main>
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/proyecto/:id" element={<ProjectDetail />} />
+    </Routes>
   );
 }
-
-export default App;
