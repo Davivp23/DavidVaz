@@ -6,7 +6,7 @@ export default function Projects() {
     <section className="my-12">
       <h2 className="text-2xl font-semibold mb-6 text-blue-300">Proyectos</h2>
       <div className="grid md:grid-cols-2 gap-6">
-        <ProjectCard title="Proyecto Ejemplo" description="Descripción de ejemplo" link="#" />
+        <ProjectCard title="Autoprofe" description="Página web para organizar horarios de alumnos de una autoescuela" link="autoprofe.pages.dev" />
         {/* Agrega más ProjectCard aquí */}
       </div>
     </section>
