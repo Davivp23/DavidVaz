@@ -6,7 +6,7 @@ import Contact from './components/Contact';
 
 export default function Home() {
   const [hoveredProject, setHoveredProject] = useState(null);
-
+  console.log('hoveredProject:', hoveredProject);
   return (
     <div className="bg-[#0d1117] text-white min-h-screen font-sans">
       <Header />
