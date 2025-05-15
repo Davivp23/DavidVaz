@@ -5,13 +5,13 @@ import projects from '../data/projects';
 export default function Projects() {
   return (
     <section className="py-10">
-      <h2 className="text-2xl font-bold mb-6">Proyectos</h2>
-      <div className="flex flex-col gap-6">
+      <h2 className="text-2xl font-bold mb-6 text-center text-blue-200">Proyectos</h2>
+      <div className="flex flex-col gap-6 max-w-3xl mx-auto">
         {projects.map((project) => (
           <Link
             key={project.id}
             to={`/proyecto/${project.id}`}
-            className="flex items-center justify-between gap-4 p-4 bg-[#161b22] border border-gray-700 rounded-2xl hover:scale-[1.02] transition-transform"
+            className="group flex items-center justify-between gap-4 p-4 bg-[#161b22] border border-gray-700 rounded-2xl hover:scale-[1.02] transition-transform"
           >
             <div className="flex-1">
               <h3 className="text-xl font-bold text-blue-200">{project.title}</h3>
