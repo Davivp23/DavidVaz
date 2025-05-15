@@ -1,8 +1,18 @@
+import React from 'react';
+import Header from './components/Header';
+import About from './components/About';
+import Projects from './components/Projects';
+import Contact from './components/Contact';
+
 export default function Home() {
   return (
-    <div className="bg-black text-white min-h-screen p-10">
-      <h1 className="text-4xl font-bold text-blue-400">¡Funciona!</h1>
-      <p className="mt-4 text-gray-400">Este es un test temporal para verificar la vista principal.</p>
+    <div className="bg-[#0d1117] text-white min-h-screen font-sans">
+      <Header />
+      <main className="px-4 md:px-16">
+        <About />
+        <Projects />
+        <Contact />
+      </main>
     </div>
   );
 }
