@@ -3,6 +3,8 @@ import Header from './components/Header';
 import About from './components/About';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
+import ProjectPreview from './components/ProjectPreview';
+
 
 export default function Home() {
   const [hoveredProject, setHoveredProject] = useState(null);
@@ -21,15 +23,7 @@ export default function Home() {
 
         {/* Columna derecha: imagen dinámica */}
         <div className="hidden md:flex w-1/3 items-center justify-center">
-          {hoveredProject ? (
-            <img
-              src={hoveredProject.image}
-              alt={hoveredProject.title}
-              className="w-full max-w-xs rounded-xl shadow-xl transition-all duration-500"
-            />
-          ) : (
-            <div className="text-gray-600 italic">Pasa el cursor por un proyecto</div>
-          )}
+          <ProjectPreview project={hoveredProject} />
         </div>
       </main>
     </div>
