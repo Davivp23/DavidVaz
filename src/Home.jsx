@@ -1,37 +1,30 @@
+// Home.jsx
 import React, { useState } from 'react';
-import Header from './components/Header';
-import About from './components/About';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
+import Projects from './Projects';
+import ProjectPreview from './ProjectPreview';
+import About from './About';
+import Contact from './Contact';
 
 export default function Home() {
   const [hoveredProject, setHoveredProject] = useState(null);
-  console.log('hoveredProject:', hoveredProject);
+
+  const handleHover = (project) => {
+    setHoveredProject(project);
+  };
+
   return (
-    <div className="bg-[#0d1117] text-white min-h-screen font-sans">
-      <Header />
+    <div className="flex">
+      {/* IZQUIERDA */}
+      <div className="w-1/2 p-8 space-y-10">
+        <About />
+        <Projects onHover={handleHover} />
+        <Contact />
+      </div>
 
-      <main className="flex flex-col md:flex-row px-4 md:px-16">
-        {/* Columna izquierda: contenido */}
-        <div className="md:w-2/3 w-full md:pr-8">
-          <About />
-          <Projects onHover={setHoveredProject} />
-          <Contact />
-        </div>
-
-        {/* Columna derecha: imagen dinámica */}
-        <div className="hidden md:flex w-1/3 items-center justify-center">
-          {hoveredProject ? (
-            <img
-              src={hoveredProject.image}
-              alt={hoveredProject.title}
-              className="w-full max-w-xs rounded-xl shadow-xl transition-all duration-500"
-            />
-          ) : (
-            <div className="text-gray-600 italic">Pasa el cursor por un proyecto</div>
-          )}
-        </div>
-      </main>
+      {/* DERECHA */}
+      <div className="w-1/2 p-8 flex items-center justify-center">
+        <ProjectPreview project={hoveredProject} />
+      </div>
     </div>
   );
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import projects from '../data/projects';
 
-export default function Projects() {
+export default function Projects({ onHover }) {
   return (
     <section className="py-10">
       <h2 className="p-6 text-center text-3xl font-bold text-blue-400">Proyectos</h2>
