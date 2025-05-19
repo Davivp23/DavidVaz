@@ -15,7 +15,7 @@ export default function Home() {
 
       <main className="flex flex-col md:flex-row px-4 md:px-16">
         {/* Columna izquierda: contenido */}
-        <div className="md:w-2/3 w-full md:pr-8">
+        <div className="md:w-1/2 w-full md:pr-8">
           <About />
           <Projects onHover={setHoveredProject} />
           <Contact />
