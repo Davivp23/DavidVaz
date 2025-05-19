@@ -3,7 +3,7 @@ const projects = [
     id: 'autoprofe',
     title: 'Horario Autoprofe',
     description: 'Una página web para organizar horarios de alumnos de una autoescuela.',
-    url: 'https://autoprofe.pages.dev',
+    url: 'src/previews/Autoprofe.html',
     image: 'https://pbs.twimg.com/media/Gq8_fgYXsAAzBx_?format=jpg&name=large',
     technologies: ['HTML', 'CSS', 'JavaScript'],
   },
