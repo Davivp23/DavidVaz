@@ -1,4 +1,4 @@
-import React from 'react';
+import {React, useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 const asciiArt = ` ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ 
  ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ 
@@ -69,16 +69,11 @@ const asciiArt = ` ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒�
 
 
 export default function ProjectPreview({ project }) {
-  const isEmbedded = typeof window !== "undefined" && window.self !== window.top;
-  return (
-    <div className="w-full h-full bg-black text-green-400 font-mono text-sm p-4 overflow-auto rounded-2xl shadow-lg">
-      {isEmbedded ? (
-        <pre>{asciiArt}</pre>
-      ) : (
-        <YourInteractivePreviewComponent />
-      )}
-    </div>
-  );
+  const [isEmbedded, setIsEmbedded] = useState(false);
+
+  useEffect(() => {
+    setIsEmbedded(window.self !== window.top);
+  }, []);
 
   return (
     <AnimatePresence mode="wait">
@@ -91,6 +86,11 @@ export default function ProjectPreview({ project }) {
           transition={{ duration: 0.3, ease: 'easeOut' }}
           className="w-full h-[400px] md:h-full border-2 border-orange-500 rounded-xl overflow-hidden shadow-[0_0_20px_#f9731666]"
         >
+          {isEmbedded && project.slug === 'portafolio' ? (
+            <pre className="w-full h-full flex items-center justify-center text-green-400 text-xs md:text-sm font-mono p-4 text-center">
+              {asciiTop}
+            </pre>
+          ) : (
           <iframe
             src={project.url}
             title={`Preview de ${project.title}`}
@@ -99,6 +99,7 @@ export default function ProjectPreview({ project }) {
             loading="lazy"
             sandbox="allow-same-origin allow-scripts allow-popups"
           />
+          )}
         </motion.div>
       ) : (
         <motion.div
