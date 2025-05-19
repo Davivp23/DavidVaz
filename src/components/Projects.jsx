@@ -12,7 +12,6 @@ export default function Projects({ onHover }) {
             key={project.id}
             to={`/proyecto/${project.id}`}
             onMouseEnter={() => onHover(project)}
-            onMouseLeave={() => onHover(null)}
             className="block p-4 bg-[#0a0f1c] border-2 border-blue-500 rounded-2xl hover:border-orange-500 hover:shadow-[0_0_20px_#ff6b35aa] transition duration-300">
             <h3 className="text-xl font-bold text-blue-400">{project.title}</h3>
             <p className="text-gray-300">{project.description}</p>
