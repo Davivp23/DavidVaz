@@ -22,7 +22,7 @@ export default function Home() {
         </div>
 
         {/* Columna derecha: imagen dinámica */}
-        <div className="hidden md:flex w-1/3 items-center justify-center">
+        <div className="hidden md:flex w-1/2 items-center justify-center">
           <ProjectPreview project={hoveredProject} />
         </div>
       </main>
