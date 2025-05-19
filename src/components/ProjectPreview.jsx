@@ -11,12 +11,15 @@ export default function ProjectPreview({ project }) {
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 10 }}
           transition={{ duration: 0.3, ease: 'easeOut' }}
-          className="max-w-sm p-4 border rounded-2xl bg-[#0d1117]"
+          className="w-full h-72 md:h-[400px] border-2 border-orange-500 rounded-xl overflow-hidden shadow-[0_0_20px_#f9731666]"
         >
-          <img
-            src={project.image}
-            alt={project.title}
-            className="rounded-lg"
+          <iframe
+            src={project.url}
+            title={`Preview de ${project.title}`}
+            className="w-full h-full"
+            frameBorder="0"
+            loading="lazy"
+            sandbox="allow-same-origin allow-scripts allow-popups"
           />
         </motion.div>
       ) : (
