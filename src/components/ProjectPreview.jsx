@@ -54,15 +54,6 @@ export default function ProjectPreview({ project }) {
                                                                       
 `
 
-  if (isEmbedded) {
-    return (
-      <div className="w-full h-[400px] md:h-full border-2 border-orange-500 rounded-xl overflow-hidden shadow-[0_0_20px_#f9731666]">
-        <pre className="w-full h-full flex items-center justify-center text-green-400 text-xs md:text-sm font-mono p-4 text-center">
-          {asciiArt}
-        </pre>
-      </div>
-    );
-  }
   return (
     <AnimatePresence mode="wait">
       {project ? (
@@ -74,9 +65,9 @@ export default function ProjectPreview({ project }) {
           transition={{ duration: 0.3, ease: 'easeOut' }}
           className="w-full h-[400px] md:h-full border-2 border-orange-500 rounded-xl overflow-hidden shadow-[0_0_20px_#f9731666]"
         >
-          {isEmbedded ? (
+          {isEmbedded && project?.slug === 'portafolio' ? (
             <pre className="w-full h-full flex items-center justify-center text-green-400 text-xs md:text-xs font-mono p-4 text-center">
-              {asciiTop}
+              {asciiArt}
             </pre>
           ) : (
           <iframe
