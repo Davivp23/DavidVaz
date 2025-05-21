@@ -11,7 +11,7 @@ const projects = [
     id: 'generador',
     title: 'Planificador de generadores eléctricos lineales',
     description: 'Una pequeña aplicación web para elegir variables a la hora de crear el generador lineal óptimo.',
-    url: 'https://generadorlineal.streamlit.app',
+    url: 'https://generadorlineal.onrender.com',
     image: 'https://pbs.twimg.com/media/Gq5lFEMXwAEpJMJ?format=png&name=small',
     technologies: ['Python', 'streamlit', 'matplotlib'],
   },
