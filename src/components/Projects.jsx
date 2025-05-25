@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import { Link } from 'react-router-dom';
 import projects from '../data/projects';
 
-export default function Projects({ onHover }) {
+const Projects = forwardRef(({ onHover }, ref) => {
   return (
     <section className="py-10">
       <h2 className="text-2xl font-semibold mb-4 text-blue-300">Proyectos</h2>
@@ -22,4 +22,6 @@ export default function Projects({ onHover }) {
       </div>
     </section>
   );
-}
+});
+
+export default Projects;

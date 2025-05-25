@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import Header from './components/Header';
 import About from './components/About';
 import Projects from './components/Projects';
@@ -8,6 +8,30 @@ import ProjectPreview from './components/ProjectPreview';
 
 export default function Home() {
   const [hoveredProject, setHoveredProject] = useState(null);
+  const projectsRef = useRef(null);
+  const previewRef = useRef(null);
+
+  useEffect(() => {
+    const updateOffset = () => {
+      if (projectsRef.current && previewRef.current) {
+        const projectsRect = projectsRef.current.getBoundingClientRect();
+        const projectsCenter = projectsRect.top + projectsRect.height / 2;
+        const previewHeight = previewRef.current.offsetHeight;
+        const newOffset = projectsCenter - previewHeight / 2 + window.scrollY;
+        setOffset(newOffset);
+      }
+    };
+    updateOffset();
+    window.addEventListener('resize', updateOffset);
+    window.addEventListener('scroll', updateOffset);
+
+    return () => {
+      window.removeEventListener('resize', updateOffset);
+      window.removeEventListener('scroll', updateOffset);
+    };
+  }, []);
+
+  const [offset, setOffset] = useState(0);
   console.log('hoveredProject:', hoveredProject);
   return (
     <div className="bg-[#0d1117] text-white min-h-screen font-sans">
