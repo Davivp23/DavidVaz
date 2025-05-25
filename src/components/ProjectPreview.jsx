@@ -63,7 +63,7 @@ export default function ProjectPreview({ project }) {
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 10 }}
           transition={{ duration: 0.3, ease: 'easeOut' }}
-          className="w-full h-full md:h-full border-2 border-orange-500 rounded-xl overflow-hidden shadow-[0_0_20px_#f9731666]"
+          className="w-full h-[400px] md:h-full border-2 border-orange-500 rounded-xl overflow-hidden shadow-[0_0_20px_#f9731666]"
         >
           {isEmbedded && project.id === 'portafolio' ? (
             <pre className="w-full h-full flex items-center justify-center text-blue-400 text-xs md:text-xs font-mono p-4 text-center">
