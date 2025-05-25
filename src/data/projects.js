@@ -5,7 +5,7 @@ const projects = [
     description: 'Una página web para organizar horarios de alumnos de una autoescuela.',
     url: '/previews/Autoprofe.html',
     image: 'https://pbs.twimg.com/media/Gq8_fgYXsAAzBx_?format=jpg&name=large',
-    technologies: ['HTML', 'CSS', 'JavaScript'],
+    technologies: ['HTML', 'CSS', 'JavaScript', 'Supabase', 'Cloudflare Workers'],
   },
   {
     id: 'generador',
