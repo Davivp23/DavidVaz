@@ -48,7 +48,7 @@ export default function Home() {
         </div>
 
         {/* Columna derecha: imagen dinámica */}
-        <div classname="relative w-1/2 h-[90vh]">
+        <div classname="relative">
           <div
             ref={previewRef}
             className="hidden md:flex w-full h-[90vh] items-center justify-center absolute"
