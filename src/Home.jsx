@@ -5,49 +5,54 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import ProjectPreview from './components/ProjectPreview';
 
-
 export default function Home() {
   const [hoveredProject, setHoveredProject] = useState(null);
   const projectsRef = useRef(null);
   const previewRef = useRef(null);
+  const [offset, setOffset] = useState(0);
+
+  const updateOffset = () => {
+    if (!projectsRef.current || !previewRef.current) return;
+
+    const projectBox = projectsRef.current.getBoundingClientRect();
+    const previewHeight = previewRef.current.offsetHeight;
+
+    const centerY = projectBox.top + projectBox.height / 2 + window.scrollY;
+    const finalTop = centerY - previewHeight / 2;
+
+    setOffset(finalTop);
+  };
 
   useEffect(() => {
-    const updateOffset = () => {
-      if (projectsRef.current && previewRef.current) {
-        const projectsRect = projectsRef.current.getBoundingClientRect();
-        const projectsCenter = projectsRect.top + projectsRect.height / 2;
-        const previewHeight = previewRef.current.offsetHeight;
-        const newOffset = projectsCenter - previewHeight / 2 + window.scrollY;
-        setOffset(newOffset);
-      }
-    };
     updateOffset();
     window.addEventListener('resize', updateOffset);
     window.addEventListener('scroll', updateOffset);
-
     return () => {
       window.removeEventListener('resize', updateOffset);
       window.removeEventListener('scroll', updateOffset);
     };
-  }, []);
+  }, [hoveredProject]); // También lo recalculamos cuando cambia
 
-  const [offset, setOffset] = useState(0);
-  console.log('hoveredProject:', hoveredProject);
   return (
     <div className="bg-[#0d1117] text-white min-h-screen font-sans">
       <Header />
-
       <main className="flex flex-col md:flex-row px-4 md:px-16">
-        {/* Columna izquierda: contenido */}
+        {/* Columna izquierda */}
         <div className="md:w-1/2 w-full md:pr-8">
           <About />
-          <Projects onHover={setHoveredProject} />
+          <Projects onHover={setHoveredProject} ref={projectsRef} />
           <Contact />
         </div>
 
-        {/* Columna derecha: imagen dinámica */}
-        <div className="hidden md:flex w-1/2 h-[90vh] items-center justify-center">
-          <ProjectPreview project={hoveredProject} />
+        {/* Columna derecha */}
+        <div className="hidden md:flex w-1/2 relative">
+          <div
+            ref={previewRef}
+            style={{ position: 'absolute', top: `${offset}px` }}
+            className="w-full flex items-center justify-center transition-all duration-300 ease-in-out pointer-events-none min-h-[300px]"
+          >
+            <ProjectPreview project={hoveredProject} />
+          </div>
         </div>
       </main>
     </div>
