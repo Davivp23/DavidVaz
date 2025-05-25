@@ -49,7 +49,7 @@ export default function Home() {
           <div
             ref={previewRef}
             style={{ position: 'absolute', top: `${offset}px` }}
-            className="w-full min-h-[50vh] flex items-center justify-center transition-all duration-300 ease-in-out pointer-events-none min-h-[300px]"
+            className="w-full min-h-[50vh] flex items-center justify-center transition-all duration-300 ease-in-out]"
           >
             <ProjectPreview project={hoveredProject} />
           </div>
