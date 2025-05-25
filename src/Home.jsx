@@ -39,7 +39,7 @@ export default function Home() {
     <div className="bg-[#0d1117] text-white min-h-screen font-sans">
       <Header />
 
-      <main className="relative flex flex-col md:flex-row px-4 md:px-16">
+      <main className="flex flex-col md:flex-row px-4 md:px-16">
         {/* Columna izquierda: contenido */}
         <div className="md:w-1/2 w-full md:pr-8">
           <About />
@@ -48,12 +48,14 @@ export default function Home() {
         </div>
 
         {/* Columna derecha: imagen dinámica */}
-        <div
-          ref={previewRef}
-          className="hidden md:flex w-1/2 h-[90vh] items-center justify-center absolute"
-          style={{ top: `${offset}px` }}
-        >
-          <ProjectPreview project={hoveredProject} />
+        <div classname="relative w-1/2 h-[90vh]">
+          <div
+            ref={previewRef}
+            className="hidden md:flex w-full h-[90vh] items-center justify-center absolute"
+            style={{ top: `${offset}px` }}
+          >
+            <ProjectPreview project={hoveredProject} />
+          </div>
         </div>
       </main>
     </div>
