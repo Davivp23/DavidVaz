@@ -46,14 +46,8 @@ export default function Home() {
         </div>
 
         {/* Columna derecha: imagen dinámica */}
-        <div className="hidden md:flex w-1/2 relative">
-          <div
-            ref={previewRef}
-            style={{ position: 'absolute', top: `${offset}px` }}
-            className="w-full flex items-center justify-center transition-all duration-300 ease-in-out"
-          >
-            <ProjectPreview project={hoveredProject} />
-          </div>
+        <div className="hidden md:flex w-1/2 h-[90vh] items-center justify-center">
+          <ProjectPreview project={hoveredProject} />
         </div>
       </main>
     </div>
