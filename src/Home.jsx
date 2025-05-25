@@ -13,7 +13,7 @@ export default function Home() {
 
   useEffect(() => {
     const updateOffset = () => {
-      if (projectsRef.current && previewRef.current) {
+      if (!projectsRef.current || !previewRef.current) {
         const projectsRect = projectsRef.current.getBoundingClientRect();
         const projectsCenter = projectsRect.top + projectsRect.height / 2;
         const previewHeight = previewRef.current.offsetHeight;
@@ -46,8 +46,13 @@ export default function Home() {
         </div>
 
         {/* Columna derecha: imagen dinámica */}
-        <div className="hidden md:flex w-1/2 h-[90vh] items-center justify-center">
-          <ProjectPreview project={hoveredProject} />
+        <div className="hidden md:flex w-1/2 relative">
+          <div
+            ref={previewRef}
+            style={{ top: offset }} 
+            className="hidden md:flex w-full h-[90vh] items-center justify-center">
+            <ProjectPreview project={hoveredProject} />
+          </div>
         </div>
       </main>
     </div>
