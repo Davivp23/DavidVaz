@@ -11,9 +11,11 @@ export default function Home() {
   const projectsRef = useRef(null);
   const previewRef = useRef(null);
 
+  const [offset, setOffset] = useState(0);
+
   useEffect(() => {
     const updateOffset = () => {
-      if (projectsRef.current && previewRef.current) return; // <- esta línea previene el error
+      if (!projectsRef.current || !previewRef.current) return; // <- esta línea previene el error
 
       const projectsRect = projectsRef.current.getBoundingClientRect();
       const projectsCenter = projectsRect.top + projectsRect.height / 2;
@@ -32,8 +34,6 @@ export default function Home() {
     };
   }, []);
 
-
-  const [offset, setOffset] = useState(0);
   console.log('hoveredProject:', hoveredProject);
   return (
     <div className="bg-[#0d1117] text-white min-h-screen font-sans">
@@ -48,7 +48,7 @@ export default function Home() {
         </div>
 
         {/* Columna derecha: imagen dinámica */}
-        <div classname="relative">
+        <div className="relative">
           <div
             ref={previewRef}
             className="hidden md:flex w-full h-[90vh] items-center justify-center absolute"
