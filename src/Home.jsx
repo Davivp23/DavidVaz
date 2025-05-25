@@ -49,8 +49,9 @@ export default function Home() {
         <div className="hidden md:flex w-1/2 relative">
           <div
             ref={previewRef}
-            style={{ top: offset }}
-            className="absolute w-full h-full transition-transform duration-300 ease-in-out">
+            style={{ position: 'absolute', top: `${offset}px` }}
+            className="w-full flex items-center justify-center transition-all duration-300 ease-in-out"
+          >
             <ProjectPreview project={hoveredProject} />
           </div>
         </div>
