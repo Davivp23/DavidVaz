@@ -13,14 +13,15 @@ export default function Home() {
 
   useEffect(() => {
     const updateOffset = () => {
-      if (!projectsRef.current || !previewRef.current) {
-        const projectsRect = projectsRef.current.getBoundingClientRect();
-        const projectsCenter = projectsRect.top + projectsRect.height / 2;
-        const previewHeight = previewRef.current.offsetHeight;
-        const newOffset = projectsCenter - previewHeight / 2 + window.scrollY;
-        setOffset(newOffset);
-      }
+      if (!projectsRef.current || !previewRef.current) return; // <- esta línea previene el error
+
+      const projectsRect = projectsRef.current.getBoundingClientRect();
+      const projectsCenter = projectsRect.top + projectsRect.height / 2;
+      const previewHeight = previewRef.current.offsetHeight;
+      const newOffset = projectsCenter - previewHeight / 2 + window.scrollY;
+      setOffset(newOffset);
     };
+
     updateOffset();
     window.addEventListener('resize', updateOffset);
     window.addEventListener('scroll', updateOffset);
@@ -30,6 +31,7 @@ export default function Home() {
       window.removeEventListener('scroll', updateOffset);
     };
   }, []);
+
 
   const [offset, setOffset] = useState(0);
   console.log('hoveredProject:', hoveredProject);
@@ -41,7 +43,7 @@ export default function Home() {
         {/* Columna izquierda: contenido */}
         <div className="md:w-1/2 w-full md:pr-8">
           <About />
-          <Projects onHover={setHoveredProject} />
+          <Projects ref={projectsRef} onHover={setHoveredProject} />
           <Contact />
         </div>
 
