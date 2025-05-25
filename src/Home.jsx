@@ -54,7 +54,7 @@ export default function Home() {
         <div className="relative md:w-1/2 w-full">
           <div
             ref={previewRef}
-            className="hidden md:flex w-full h-[90vh] items-center justify-center absolute"
+            className="hidden md:flex w-full h-[100vh] items-center justify-center absolute"
             style={{ top: `${offset}px` }}
           >
             <ProjectPreview project={hoveredProject} />
