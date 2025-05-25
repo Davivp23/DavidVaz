@@ -48,11 +48,11 @@ export default function Home() {
         </div>
 
         {/* Columna derecha: imagen dinámica */}
-        <div className="relative">
+        <div className="relative w-1/2">
           <div
             ref={previewRef}
-            className="hidden md:flex absolute h-[90vh] items-center justify-center"
-            style={{ top: `${offset}px`, width: '50%' }}
+            className="md:flex w-full h-[90vh] items-center justify-center absolute"
+            style={{ top: `${offset}px` }}
           >
             <ProjectPreview project={hoveredProject} />
           </div>
