@@ -17,10 +17,10 @@ export default function Home() {
     const projectBox = projectsRef.current.getBoundingClientRect();
     const previewHeight = previewRef.current.offsetHeight;
 
-    const centerY = projectBox.top + projectBox.height / 2 + window.scrollY;
-    const finalTop = centerY - previewHeight / 2;
+    const projectsCenter = projectBox.top + projectBox.height / 2 + window.scrollY;
+    const previewTop = projectsCenter - previewHeight / 2;
 
-    setOffset(finalTop);
+    setOffset(previewTop);
   };
 
   useEffect(() => {
@@ -49,7 +49,7 @@ export default function Home() {
           <div
             ref={previewRef}
             style={{ position: 'absolute', top: `${offset}px` }}
-            className="w-full flex items-center justify-center transition-all duration-300 ease-in-out pointer-events-none min-h-[300px]"
+            className="w-full min-h-[50vh] flex items-center justify-center transition-all duration-300 ease-in-out pointer-events-none min-h-[300px]"
           >
             <ProjectPreview project={hoveredProject} />
           </div>
