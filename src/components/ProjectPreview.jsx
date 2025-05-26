@@ -7,8 +7,8 @@ export default function ProjectPreview({ project }) {
   useEffect(() => {
   // Preload el proyecto lento
     const slowProject = {
-      id: 'proyecto-lento',
-      url: 'https://tuproyectolento.onrender.com',
+      id: 'generador',
+      url: 'https://generadorlineal.onrender.com',
     };
 
     const iframe = document.createElement('iframe');
