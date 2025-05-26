@@ -5,7 +5,22 @@ export default function ProjectPreview({ project }) {
   const [isEmbedded, setIsEmbedded] = useState(false);
 
   useEffect(() => {
-    setIsEmbedded(window.self !== window.top);
+  // Preload el proyecto lento
+    const slowProject = {
+      id: 'proyecto-lento',
+      url: 'https://tuproyectolento.onrender.com',
+    };
+
+    const iframe = document.createElement('iframe');
+    iframe.src = slowProject.url;
+    iframe.style.display = 'none';
+    iframe.loading = 'eager';
+    iframe.sandbox = "allow-same-origin allow-scripts allow-popups";
+    document.body.appendChild(iframe);
+
+    return () => {
+      document.body.removeChild(iframe);
+    };
   }, []);
 
   const asciiArt = String.raw` ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ 
