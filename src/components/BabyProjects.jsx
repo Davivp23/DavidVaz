@@ -1,6 +1,7 @@
 import React, { forwardRef } from 'react';
 import { Link } from 'react-router-dom';
 import projects from '../data/babyProjects';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
 const Projects = forwardRef(({ onHover }, ref) => {
   return (
