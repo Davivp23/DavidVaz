@@ -39,7 +39,6 @@ export default function ProjectDetail() {
               </a>
               <a 
                 href="/"
-                target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block mt-4 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-lg transition m-6"
               >
