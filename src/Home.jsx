@@ -52,7 +52,7 @@ export default function Home() {
         </div>
 
         {/* Columna derecha */}
-        <div className="relative md:w-1/2 w-full my-auto">
+        <div className="relative md:w-1/2 w-full flex items-center justify-center my-auto">
           <div
             ref={previewRef}
             className="hidden md:flex w-full h-[90%] items-center justify-center absolute"
