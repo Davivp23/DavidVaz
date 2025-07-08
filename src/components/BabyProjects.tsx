@@ -21,7 +21,7 @@ const Projects = forwardRef<HTMLElement, { onHover?: (project: any) => void }>((
           <Card
             key={project.id}
             onMouseEnter={() => onHover(project)}
-            className="min-w-[30%] max-w-[30%] px-8 bg-[#0a0f1c] border-2 border-blue-500 rounded-2xl hover:border-orange-500 hover:shadow-[0_0_20px_#ff6b35aa] transition-all duration-300 group overflow-hidden"
+            className="m-10 min-w-[30%] max-w-[30%] px-8 bg-[#0a0f1c] border-2 border-blue-500 rounded-2xl hover:border-orange-500 hover:shadow-[0_0_20px_#ff6b35aa] transition-all duration-300 group overflow-hidden"
           >
             <CardHeader className="p-0">
               {/* 4. El botón ahora abre el modal con la imagen del proyecto */}
