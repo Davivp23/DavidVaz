@@ -5,6 +5,10 @@ export default function ProjectPreview({ project }) {
   const [isEmbedded, setIsEmbedded] = useState(false);
 
   useEffect(() => {
+  // Verifica si el componente está embebido en un iframe
+    if (window.self !== window.top) {
+    setIsEmbedded(true);
+
   // Preload el proyecto lento
     const slowProject = {
       id: 'generador',
@@ -18,14 +22,11 @@ export default function ProjectPreview({ project }) {
     iframe.sandbox = "allow-same-origin allow-scripts allow-popups";
     document.body.appendChild(iframe);
 
-    if (window.self !== window.top) {
-    setIsEmbedded(true);
-    }
     return () => {
       document.body.removeChild(iframe);
     };
+    }
   }, []);
-
   const asciiArt = String.raw`Mejor lo dejamos aquí, ¿no?`
   return (
     <AnimatePresence mode="wait">
