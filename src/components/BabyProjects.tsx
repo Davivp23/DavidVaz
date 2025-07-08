@@ -4,7 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/
 import { ImagePreviewModal } from './ui/image-preview-modal';
 
 
-const Projects = forwardRef<HTMLElement, { onHover: (project: any) => void }>(({ onHover }, ref) => {
+const Projects = forwardRef<HTMLElement, { onHover?: (project: any) => void }>(({ onHover = () => {} }, ref) => {
   // 1. Añadimos el estado para saber qué imagen está seleccionada
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
@@ -43,7 +43,7 @@ const Projects = forwardRef<HTMLElement, { onHover: (project: any) => void }>(({
               {/* Asumo que tus proyectos tienen 'title', 'description' y 'tech' */}
               <CardTitle className="font-headline text-2xl mb-2">{project.title}</CardTitle>
               <CardDescription>{project.description}</CardDescription>
-              <CardDescription className="mt-4 text-sm text-blue-300/80">{project.technologies}</CardDescription>
+              <CardDescription className="mt-4 text-sm text-blue-300/80">{project.technologies.join(', ')}</CardDescription>
             </CardContent>
           </Card>
         ))}
