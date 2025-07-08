@@ -28,12 +28,12 @@ export default function ProjectDetail() {
             <div className="my-6">
               <img src={project.image} alt={`Captura de ${project.title}`} className="border-2 border-orange-500 rounded-xl overflow-hidden shadow-[0_0_20px_#f9731666]" />
             </div>
-            <div className="flex flex-col gap-2 mb-4">
+            <div className="flex flex-row gap-2 mb-4">
               <a 
                 href={project.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block mt-4 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-lg transition"
+                className="inline-block mt-4 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-lg transition m-6"
               >
                 Ver sitio en vivo
               </a>
@@ -41,7 +41,7 @@ export default function ProjectDetail() {
                 href="/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block mt-4 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-lg transition"
+                className="inline-block mt-4 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-lg transition m-6"
               >
                 Volver a todos los proyectos
               </a>
