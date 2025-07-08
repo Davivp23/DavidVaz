@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react';
 import { Link } from 'react-router-dom';
 import projects from '../data/babyProjects';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from 'src/components/ui/card.tsx';
 
 const Projects = forwardRef(({ onHover }, ref) => {
   return (
@@ -18,7 +18,7 @@ const Projects = forwardRef(({ onHover }, ref) => {
             <img
               src={item.imageUrl}
               alt={item.title}
-              width={600}
+              width={600} // do you remember twenty first night of september?
               height={400}
               data-ai-hint={item.aiHint}
               className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
@@ -33,9 +33,9 @@ const Projects = forwardRef(({ onHover }, ref) => {
               <p className="text-gray-300" style={{ marginBottom: '0.5vh' }}>{project.technologies.join(', ')}</p>
           </CardHeader>
         ))}
-      </div>
+      </div> 
     </section>
-  );
+  ); // say that you remembeeer dancing in september
 });
 
 export default Projects;
