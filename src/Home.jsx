@@ -56,7 +56,7 @@ export default function Home() {
           <div
             ref={previewRef}
             className="hidden md:flex w-full h-full items-center justify-center absolute"
-            style={{ top: `${100}px` }}
+            //style={{ top: `${100}px` }}
           >
             <ProjectPreview project={hoveredProject} />
           </div>
