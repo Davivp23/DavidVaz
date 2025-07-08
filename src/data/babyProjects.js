@@ -3,7 +3,7 @@ const babyProjects = [
     id: 'TR',
     title: 'IA Análisis de células cancerígenas',
     description: 'Trabajo de fin de bachillerato en el que se utiliza una IA para analizar imágenes de células cancerígenas y determinar si son malignas o benignas según su dimensión fractal.',
-    image: 'https://placehold.co/600x400.png',
+    image: 'https://pbs.twimg.com/media/GvXWaeuWAAA0zFh?format=jpg&name=large',
     technologies: ['Python', 'Numpy', 'matplotlib', 'tensorflow'],
   },
   {
