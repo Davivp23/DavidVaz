@@ -47,7 +47,6 @@ export default function Home() {
         <div className="md:w-1/2 w-full md:pr-8">
           <About />
           <Projects ref={projectsRef} onHover={setHoveredProject} />
-          <Contact />
         </div>
 
         {/* Columna derecha */}
@@ -59,6 +58,12 @@ export default function Home() {
           >
             <ProjectPreview project={hoveredProject} />
           </div>
+        </div>
+
+        {/* No más columnas */}
+        <div className="md:w-1/2 w-full md:pr-8">
+          <OtherProjects ref={projectsRef} onHover={setHoveredProject} />
+          <Contact />
         </div>
       </main>
     </div>
