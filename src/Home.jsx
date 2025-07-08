@@ -43,27 +43,28 @@ export default function Home() {
   return (
     <div className="bg-[#0d1117] text-white min-h-screen font-sans">
       <Header />
-      <main className="container mx-auto flex flex-col md:flex-row px-4">
-        {/* Columna izquierda */}
-        <div className="md:w-1/2 w-full md:pr-8">
-          <About />
-          <Projects ref={projectsRef} onHover={setHoveredProject} />
-        </div>
+      <main className="container">
+        <div className="mx-auto flex flex-col md:flex-row px-4">
+          {/* Columna izquierda */}
+          <div className="md:w-1/2 w-full md:pr-8">
+            <About />
+            <Projects ref={projectsRef} onHover={setHoveredProject} />
+          </div>
 
-        {/* Columna derecha */}
-        <div className="relative md:w-1/2 w-full">
-          <div
-            ref={previewRef}
-            className="hidden md:flex w-full h-[70%] items-center justify-center absolute"
-            style={{ top: `${offset - 50}px` }}
-          >
-            <ProjectPreview project={hoveredProject} />
+          {/* Columna derecha */}
+          <div className="relative md:w-1/2 w-full">
+            <div
+              ref={previewRef}
+              className="hidden md:flex w-full h-[70%] items-center justify-center absolute"
+              style={{ top: `${offset - 50}px` }}
+            >
+              <ProjectPreview project={hoveredProject} />
+            </div>
           </div>
         </div>
-
         {/* No más columnas */}
-        <div className="w-full md:pr-8">
-          <BabyProjects ref={projectsRef} onHover={setHoveredProject} />
+        <div className="mx-auto flex w-full md:pr-8">
+          <BabyProjects ref={projectsRef} />
           <Contact />
         </div>
       </main>
