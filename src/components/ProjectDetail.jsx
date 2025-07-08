@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import projects from '../data/projects';
-import Header from './components/Header';
+import Header from './Header';
 
 export default function ProjectDetail() {
   const { id } = useParams();
