@@ -5,7 +5,7 @@ import projects from '../data/babyProjects';
 const Projects = forwardRef(({ onHover }, ref) => {
   return (
     <section ref={ref} className="py-10">
-      <h2 className="pl-2 text-2xl font-semibold mb-4 text-blue-400">Proyectos</h2>
+      <h2 className="pl-2 text-2xl font-semibold mb-4 text-blue-400">Proyectos pequeños</h2>
       <div className="flex flex-col gap-6">
         {projects.map((project) => (
           <Link
