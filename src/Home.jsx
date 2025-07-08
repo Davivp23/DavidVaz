@@ -52,11 +52,11 @@ export default function Home() {
         </div>
 
         {/* Columna derecha */}
-        <div className="relative md:w-1/2 w-full">
+        <div className="relative md:w-1/2 w-full my-auto">
           <div
             ref={previewRef}
             className="hidden md:flex w-full h-[90%] items-center justify-center absolute"
-            style={{ top: `${100}px` }}
+            // style={{ top: `${100}px` }}
           >
             <ProjectPreview project={hoveredProject} />
           </div>
