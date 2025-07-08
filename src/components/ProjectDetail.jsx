@@ -18,11 +18,29 @@ export default function ProjectDetail() {
   return (
 
     <div className="bg-[#0d1117] text-white min-h-screen px-4 md:px-16 py-10 flex md:flex-row">
+      <h1 className="text-3xl font-bold mt-6 text-blue-400">{project.title}</h1>
       {/* Columna izquierda */}
       <div className="md:w-1/2 w-full md:pr-8">
-        <h1 className="text-3xl font-bold mt-6 text-blue-400">{project.title}</h1>
         <div className="my-6">
           <img src={project.image} alt={`Captura de ${project.title}`} className="border-2 border-orange-500 rounded-xl overflow-hidden shadow-[0_0_20px_#f9731666]" />
+        </div>
+        <div className="flex flex-col gap-2 mb-4">
+          <a 
+            href={project.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block mt-4 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-lg transition"
+          >
+            Volver a todos los proyectos
+          </a>
+          <a 
+            href="/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block mt-4 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-lg transition"
+          >
+            Ver sitio en vivo
+          </a>
         </div>
       </div>
 
@@ -33,24 +51,6 @@ export default function ProjectDetail() {
           <strong>Tecnologías usadas:</strong> {project.technologies.join(', ')}
         </p>
       </div>
-    
-      <a 
-        href={project.url}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="inline-block mt-4 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-lg transition"
-      >
-        Volver a todos los proyectos
-      </a>
-
-      <a 
-        href="/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="inline-block mt-4 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-lg transition"
-      >
-        Ver sitio en vivo
-      </a>
     </div>
   );
 }
