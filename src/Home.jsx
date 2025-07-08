@@ -62,7 +62,7 @@ export default function Home() {
         </div>
 
         {/* No más columnas */}
-        <div className="md:w-1/2 w-full md:pr-8">
+        <div className="w-full md:pr-8">
           <BabyProjects ref={projectsRef} onHover={setHoveredProject} />
           <Contact />
         </div>
