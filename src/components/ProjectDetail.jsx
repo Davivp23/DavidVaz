@@ -10,14 +10,14 @@ export default function ProjectDetail() {
     return (
       <div className="text-center py-20 text-gray-400">
         <p>Proyecto no encontrado.</p>
-        <Link to="/" className="text-blue-200 underline mt-4 block">&larr; Volver al inicio</Link>
+        <Link to="/" className="text-blue-300 underline mt-4 block">&larr; Volver al inicio</Link>
       </div>
     );
   }
 
   return (
     <div className="bg-[#0d1117] text-white min-h-screen px-4 md:px-16 py-10">
-      <Link to="/" className="text-blue-200 hover:underline">&larr; Volver</Link>
+      <Link to="/" className="text-blue-300 hover:underline">&larr; Volver</Link>
       
       <h1 className="text-3xl font-bold mt-6 text-blue-300">{project.title}</h1>
 
