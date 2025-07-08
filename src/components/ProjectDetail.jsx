@@ -20,7 +20,6 @@ export default function ProjectDetail() {
     <div>
       <h1 className="text-3xl font-bold mt-6 text-blue-400">{project.title}</h1>
       <div className="bg-[#0d1117] text-white min-h-screen px-4 md:px-16 py-10 flex md:flex-row">
-        <h1 className="text-3xl font-bold mt-6 text-blue-400">{project.title}</h1>
         {/* Columna izquierda */}
         <div className="md:w-1/2 w-full md:pr-8">
           <div className="my-6">
@@ -45,14 +44,14 @@ export default function ProjectDetail() {
             </a>
           </div>
         </div>
-      </div>
 
-      {/* Columna derecha */}
-      <div className="relative md:w-1/2 w-full flex-col items-center justify-center">
-        <p className="text-gray-300 mb-4">{project.description}</p>
-        <p className="text-gray-400 mb-4">
-          <strong>Tecnologías usadas:</strong> {project.technologies.join(', ')}
-        </p>
+        {/* Columna derecha */}
+        <div className="relative md:w-1/2 w-full flex-col items-center justify-center">
+          <p className="text-gray-300 mb-4">{project.description}</p>
+          <p className="text-gray-400 mb-4">
+            <strong>Tecnologías usadas:</strong> {project.technologies.join(', ')}
+          </p>
+        </div>
       </div>
     </div>
   );
