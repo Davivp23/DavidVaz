@@ -18,34 +18,36 @@ const Projects = forwardRef<HTMLElement, { onHover?: (project: any) => void }>((
         {projects.map((project) => (
           // 3. Aplicamos estilo personalizado a cada Card
           // La key y el onMouseEnter van aquí, en el elemento que se repite
-          <Card
-            key={project.id}
-            onMouseEnter={() => onHover(project)}
-            className="min-w-[30%] max-w-[30%] px-8 bg-[#0a0f1c] border-2 border-blue-500 rounded-2xl hover:border-orange-500 hover:shadow-[0_0_20px_#ff6b35aa] transition-all duration-300 group overflow-hidden"
-          >
-            <CardHeader className="p-0">
-              {/* 4. El botón ahora abre el modal con la imagen del proyecto */}
-              <button
-                onClick={() => setSelectedImage(project.imageUrl)}
-                className="block w-full aspect-video overflow-hidden"
-                aria-label={`Ver imagen de ${project.title}`}
-              >
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  width={600}
-                  height={400} // I remember, I remember... the 21st night of september 🕺
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-              </button>
-            </CardHeader>
-            <CardContent className="p-6">
-              {/* Asumo que tus proyectos tienen 'title', 'description' y 'tech' */}
-              <CardTitle className="font-headline text-2xl mb-2">{project.title}</CardTitle>
-              <CardDescription>{project.description}</CardDescription>
-              <CardDescription className="mt-4 text-sm text-blue-300/80">{project.technologies.join(', ')}</CardDescription>
-            </CardContent>
-          </Card>
+          <div className="w-[30%] p-8">
+            <Card
+              key={project.id}
+              onMouseEnter={() => onHover(project)}
+              className="min-w-[30%] max-w-[30%] px-8 bg-[#0a0f1c] border-2 border-blue-500 rounded-2xl hover:border-orange-500 hover:shadow-[0_0_20px_#ff6b35aa] transition-all duration-300 group overflow-hidden"
+            >
+              <CardHeader className="p-0">
+                {/* 4. El botón ahora abre el modal con la imagen del proyecto */}
+                <button
+                  onClick={() => setSelectedImage(project.imageUrl)}
+                  className="block w-full aspect-video overflow-hidden"
+                  aria-label={`Ver imagen de ${project.title}`}
+                >
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    width={600}
+                    height={400} // I remember, I remember... the 21st night of september 🕺
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                </button>
+              </CardHeader>
+              <CardContent className="p-6">
+                {/* Asumo que tus proyectos tienen 'title', 'description' y 'tech' */}
+                <CardTitle className="font-headline text-2xl mb-2">{project.title}</CardTitle>
+                <CardDescription>{project.description}</CardDescription>
+                <CardDescription className="mt-4 text-sm text-blue-300/80">{project.technologies.join(', ')}</CardDescription>
+              </CardContent>
+            </Card>
+          </div>
         ))}
       </div>
 
