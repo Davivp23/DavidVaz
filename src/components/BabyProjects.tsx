@@ -14,7 +14,7 @@ const Projects = forwardRef<HTMLElement, { onHover?: (project: any) => void }>((
       <h2 className="pl-2 text-2xl font-semibold mb-4 text-blue-400">Proyectos pequeños</h2>
 
       {/* 2. Usamos el grid responsivo para que se vea bien en todas las pantallas */}
-      <div className="w-full flex flex-col md:flex-row gap-8">
+      <div className="w-full flex flex-col md:flex-row gap-8 p-5">
         {projects.map((project) => (
           // 3. Aplicamos estilo personalizado a cada Card
           // La key y el onMouseEnter van aquí, en el elemento que se repite
