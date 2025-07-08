@@ -18,14 +18,15 @@ export default function ProjectPreview({ project }) {
     iframe.sandbox = "allow-same-origin allow-scripts allow-popups";
     document.body.appendChild(iframe);
 
+    if (window.self !== window.top) {
+    setIsEmbedded(true);
+    }
     return () => {
       document.body.removeChild(iframe);
     };
   }, []);
 
-  const asciiArt = String.raw` 
-  Mejor lo dejamos aquí, ¿no?                                                          
-`
+  const asciiArt = String.raw`Mejor lo dejamos aquí, ¿no?`
   return (
     <AnimatePresence mode="wait">
       {project ? (
