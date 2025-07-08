@@ -28,7 +28,7 @@ export default function ProjectDetail() {
             <div className="my-6">
               <img src={project.image} alt={`Captura de ${project.title}`} className="border-2 border-orange-500 rounded-xl overflow-hidden shadow-[0_0_20px_#f9731666]" />
             </div>
-            <div className="flex flex-row gap-2 mb-4">
+            <div className="flex flex-row gap-2 mb-4 justify-center">
               <a 
                 href={project.url}
                 target="_blank"
