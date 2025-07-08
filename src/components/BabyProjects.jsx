@@ -16,11 +16,10 @@ const Projects = forwardRef(({ onHover }, ref) => {
               aria-label={`View image for ${project.title}`}
             >
             <img
-              src={item.imageUrl}
-              alt={item.title}
+              src={project.imageUrl}
+              alt={project.title}
               width={600} // do you remember twenty first night of september?
               height={400}
-              data-ai-hint={item.aiHint}
               className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
             />
             </button>
