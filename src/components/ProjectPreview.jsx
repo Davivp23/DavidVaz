@@ -26,7 +26,6 @@ export default function ProjectPreview({ project }) {
   const asciiArt = String.raw` 
   Mejor lo dejamos aquí, ¿no?                                                          
 `
-
   return (
     <AnimatePresence mode="wait">
       {project ? (
@@ -62,7 +61,7 @@ export default function ProjectPreview({ project }) {
           transition={{ duration: 0.3 }}
           className="text-gray-600 italic text-center px-4"
         >
-          Pasa el cursor por un proyecto
+          Pasa el cursor por un proyecto para una demo interactiva
         </motion.div>
       )}
     </AnimatePresence>
