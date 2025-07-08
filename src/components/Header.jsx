@@ -1,25 +1,37 @@
 import React from 'react';
-import { Button } from '@/components/ui/button';
-import { PenTool } from 'lucide-react';
-import Link from 'next/link';
 
-export function Header() {
+export default function Header() {
   return (
-    <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur-sm">
+    <header className="sticky top-0 z-40 w-full border-b">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
-        <Link href="/" className="flex items-center gap-2">
-          <PenTool className="h-6 w-6" />
-          <span className="font-bold text-lg font-headline">Oscar Gil</span>
-        </Link>
+        <link href="/" className="flex utems-center gap-2">
+          <span className="text-3xl font-bold text-blue-400">David Vaz</span>
+        </link>
         <nav className="hidden md:flex items-center space-x-2">
-          <Button variant="link" asChild>
-            <Link href="#portfolio">Portafolio</Link>
-          </Button>
-          <Button variant="link" asChild>
-            <Link href="#contact">Contacto</Link>
-          </Button>
+          <button variant="link" asChild>
+            <link href="#portafolio">Portafolio</link>
+          </button>
+          <button variant="link" asChild>
+            <link href="#contacto">Contacto</link>
+          </button>
         </nav>
       </div>
     </header>
   );
 }
+
+
+
+
+/* export default function Header() {
+  return (
+    <header className="p-6 text-center text-3xl font-bold text-blue-400">
+      <br />
+      <br />
+      David Vaz
+      <p className="text-gray-300 text-xl">
+        Desarrollador FullStack
+      </p>
+    </header>
+  );
+} */
