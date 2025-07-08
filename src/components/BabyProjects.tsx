@@ -31,7 +31,7 @@ const Projects = forwardRef<HTMLElement, { onHover?: (project: any) => void }>((
                 aria-label={`Ver imagen de ${project.title}`}
               >
                 <img
-                  src={project.imageUrl}
+                  src={project.image}
                   alt={project.title}
                   width={600}
                   height={400} // I remember, I remember... the 21st night of september 🕺
