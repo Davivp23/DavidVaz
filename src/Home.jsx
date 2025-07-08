@@ -43,8 +43,8 @@ export default function Home() {
   return (
     <div className="bg-[#0d1117] text-white min-h-screen font-sans">
       <Header />
-      <main className="container">
-        <div className="mx-auto flex flex-col md:flex-row px-4">
+      <main className="container mx-auto flex flex-col md:flex-row px-4">
+        <div c
           {/* Columna izquierda */}
           <div className="md:w-1/2 w-full md:pr-8">
             <About />
@@ -61,9 +61,10 @@ export default function Home() {
               <ProjectPreview project={hoveredProject} />
             </div>
           </div>
-        </div>
+      </main>
+      <main className="container mx-auto flex flex-col md:flex-col px-4">
         {/* No más columnas */}
-        <div className="mx-auto flex w-full md:pr-8">
+        <div className="w-full md:pr-8">
           <BabyProjects ref={projectsRef} />
           <Contact />
         </div>
