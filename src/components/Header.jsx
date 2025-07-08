@@ -7,7 +7,7 @@ export default function Header() {
         {/* Logo o nombre */}
         <a href="/" className="flex items-center gap-6">
           <span></span>
-          <span className="text-3xl font-bold text-blue-400">David Vaz</span>
+          <span className="text-3xl font-bold text-blue-200">David Vaz</span>
         </a>
 
         {/* Navegación */}
