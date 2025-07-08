@@ -62,7 +62,7 @@ export default function Home() {
           </div>
         </div>
       </main>
-      <main className="container mx-auto flex flex-col md:flex-col px-4">
+      <main className="container mx-auto flex flex-col md:flex-col">
         {/* No más columnas */}
         <div className="w-full md:pr-8">
           <BabyProjects ref={projectsRef} />
