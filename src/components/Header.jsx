@@ -14,13 +14,13 @@ export default function Header() {
         <nav className="hidden md:flex items-center space-x-4">
           <a
             href="#portafolio"
-            className="text-sm font-medium text-gray-700 hover:text-blue-500 transition-colors"
+            className="text-sm font-medium text-gray-300 hover:text-blue-400 transition-colors"
           >
             Proyectos
           </a>
           <a
             href="#contacto"
-            className="text-sm font-medium text-gray-700 hover:text-blue-500 transition-colors"
+            className="text-sm font-medium text-gray-300 hover:text-blue-400 transition-colors"
           >
             Contacto
           </a>
