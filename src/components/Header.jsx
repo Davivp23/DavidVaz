@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-40 w-full border-b bg-white">
+    <header className="sticky top-0 z-40 w-full border-b bg-[#0d1117]">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         {/* Logo o nombre */}
         <a href="/" className="flex items-center gap-2">
@@ -15,7 +15,7 @@ export default function Header() {
             href="#portafolio"
             className="text-sm font-medium text-gray-700 hover:text-blue-500 transition-colors"
           >
-            Portafolio
+            Proyectos
           </a>
           <a
             href="#contacto"
