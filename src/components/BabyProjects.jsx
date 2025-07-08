@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react';
 import { Link } from 'react-router-dom';
 import projects from '../data/babyProjects';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from 'src/components/ui/card.tsx';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card.tsx';
 
 const Projects = forwardRef(({ onHover }, ref) => {
   return (
