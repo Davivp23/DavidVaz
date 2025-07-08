@@ -6,7 +6,6 @@ export default function Header() {
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         {/* Logo o nombre */}
         <a href="/" className="flex items-center gap-6">
-          <span></span>
           <span className="text-3xl font-bold text-blue-400">David Vaz</span>
         </a>
 
