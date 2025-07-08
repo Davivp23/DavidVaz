@@ -4,6 +4,7 @@ import About from './components/About';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import ProjectPreview from './components/ProjectPreview';
+import Projects from './components/BabyProjects';
 
 export default function Home() {
   const [hoveredProject, setHoveredProject] = useState(null);

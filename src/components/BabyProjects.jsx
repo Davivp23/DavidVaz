@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react';
 import { Link } from 'react-router-dom';
-import projects from '../data/projects';
+import projects from '../data/babyProjects';
 
 const Projects = forwardRef(({ onHover }, ref) => {
   return (
