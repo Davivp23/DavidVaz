@@ -17,12 +17,12 @@ export default function Header() {
           >
             Proyectos
           </a>
-          <a
-            href="#contacto"
+          <Link
+            to={'/cv'}
             className="text-sm font-medium text-gray-300 hover:text-blue-400 transition-colors"
           >
-            Contacto
-          </a>
+            Currículum
+          </Link>
         </nav>
       </div>
     </header>
