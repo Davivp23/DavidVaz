@@ -5,7 +5,7 @@ export default function Header() {
     <header className="sticky top-0 z-40 w-full border-b bg-[#0d1117]">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         {/* Logo o nombre */}
-        <a href="/" className="flex items-center gap-5">
+        <a href="/" className="flex items-center gap-6">
           <span></span>
           <span className="text-3xl font-bold text-blue-400">David Vaz</span>
         </a>
