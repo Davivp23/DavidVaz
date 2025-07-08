@@ -21,7 +21,7 @@ export default function ProjectDetail() {
     <div>
     <Header />
       <main className="container mx-auto flex flex-col md:flex-col px-4">
-        <h1 className="text-3xl font-bold mt-6 text-blue-400">{project.title}</h1>
+        <h1 className="pl-2 text-3xl font-bold mt-6 text-blue-400">{project.title}</h1>
         <div className="bg-[#0d1117] text-white min-h-screen px-4 md:px-16 py-10 flex md:flex-row">
           {/* Columna izquierda */}
           <div className="md:w-1/2 w-full md:pr-8">
@@ -33,7 +33,7 @@ export default function ProjectDetail() {
                 href={project.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block mt-4 bg-blue-400 hover:bg-blue-600 text-white py-2 px-4 rounded-lg transition"
+                className="inline-block mt-4 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-lg transition"
               >
                 Ver sitio en vivo
               </a>
@@ -41,7 +41,7 @@ export default function ProjectDetail() {
                 href="/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block mt-4 bg-blue-400 hover:bg-blue-600 text-white py-2 px-4 rounded-lg transition"
+                className="inline-block mt-4 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-lg transition"
               >
                 Volver a todos los proyectos
               </a>
