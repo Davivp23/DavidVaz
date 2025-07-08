@@ -44,31 +44,30 @@ export default function Home() {
     <div className="bg-[#0d1117] text-white min-h-screen font-sans">
       <Header />
       <main className="container mx-auto flex flex-col md:flex-row px-4">
-        <div c
-          {/* Columna izquierda */}
-          <div className="md:w-1/2 w-full md:pr-8">
-            <About />
-            <Projects ref={projectsRef} onHover={setHoveredProject} />
-          </div>
+        {/* Columna izquierda */}
+        <div className="md:w-1/2 w-full md:pr-8">
+          <About />
+          <Projects ref={projectsRef} onHover={setHoveredProject} />
+        </div>
 
-          {/* Columna derecha */}
-          <div className="relative md:w-1/2 w-full">
-            <div
-              ref={previewRef}
-              className="hidden md:flex w-full h-[70%] items-center justify-center absolute"
-              style={{ top: `${offset - 50}px` }}
-            >
-              <ProjectPreview project={hoveredProject} />
-            </div>
+        {/* Columna derecha */}
+        <div className="relative md:w-1/2 w-full">
+          <div
+            ref={previewRef}
+            className="hidden md:flex w-full h-[70%] items-center justify-center absolute"
+            style={{ top: `${offset - 50}px` }}
+          >
+            <ProjectPreview project={hoveredProject} />
           </div>
+        </div>
       </main>
-      <footer className="container mx-auto flex flex-col md:flex-col px-4">
+      <main className="container mx-auto flex flex-col md:flex-col px-4">
         {/* No más columnas */}
         <div className="w-full md:pr-8">
           <BabyProjects ref={projectsRef} />
           <Contact />
         </div>
-      </footer>
+      </main>
     </div>
   );
 }
