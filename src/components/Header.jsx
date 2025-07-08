@@ -1,4 +1,7 @@
 import React from 'react';
+import { Button } from '@/components/ui/button';
+import { PenTool } from 'lucide-react';
+import Link from 'next/link';
 
 export function Header() {
   return (
