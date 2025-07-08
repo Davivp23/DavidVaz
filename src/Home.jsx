@@ -4,7 +4,7 @@ import About from './components/About';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import ProjectPreview from './components/ProjectPreview';
-import Projects from './components/BabyProjects';
+import BabyProjects from './components/BabyProjects';
 
 export default function Home() {
   const [hoveredProject, setHoveredProject] = useState(null);
@@ -63,7 +63,7 @@ export default function Home() {
 
         {/* No más columnas */}
         <div className="md:w-1/2 w-full md:pr-8">
-          <OtherProjects ref={projectsRef} onHover={setHoveredProject} />
+          <BabyProjects ref={projectsRef} onHover={setHoveredProject} />
           <Contact />
         </div>
       </main>
