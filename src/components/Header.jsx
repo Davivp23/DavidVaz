@@ -6,7 +6,7 @@ export default function Header() {
       <br />
       <br />
       David Vaz
-      <p className="text-gray-300 mt-1">
+      <p className="text-gray-300 text-xl">
         Desarrollador FullStack
       </p>
     </header>
