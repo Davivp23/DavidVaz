@@ -14,14 +14,14 @@ const Projects = forwardRef<HTMLElement, { onHover?: (project: any) => void }>((
       <h2 className="pl-2 text-2xl font-semibold mb-4 text-blue-400">Proyectos pequeños</h2>
 
       {/* 2. Usamos el grid responsivo para que se vea bien en todas las pantallas */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="flex flex-row gap-8">
         {projects.map((project) => (
           // 3. Aplicamos estilo personalizado a cada Card
           // La key y el onMouseEnter van aquí, en el elemento que se repite
           <Card
             key={project.id}
             onMouseEnter={() => onHover(project)}
-            className="w-[50%] bg-[#0a0f1c] border-2 border-blue-500 rounded-2xl hover:border-orange-500 hover:shadow-[0_0_20px_#ff6b35aa] transition-all duration-300 group overflow-hidden"
+            className="w-[30%] bg-[#0a0f1c] border-2 border-blue-500 rounded-2xl hover:border-orange-500 hover:shadow-[0_0_20px_#ff6b35aa] transition-all duration-300 group overflow-hidden"
           >
             <CardHeader className="p-0">
               {/* 4. El botón ahora abre el modal con la imagen del proyecto */}
