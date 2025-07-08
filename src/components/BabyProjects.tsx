@@ -12,7 +12,9 @@ const Projects = forwardRef<HTMLElement, { onHover?: (project: any) => void }>((
     // Usamos tu <section> y el ref
     <section ref={ref} className="py-10">
       <h2 className="pl-2 text-2xl font-semibold mb-4 text-blue-400">Proyectos pequeños</h2>
-
+      <p className="pl-2 text-gray-300">
+        (Tarjetas no interactivas)</p>
+    </section>
       {/* 2. Usamos el grid responsivo para que se vea bien en todas las pantallas */}
       <div className="w-full flex flex-col md:flex-wrap md:flex-row gap-8 p-5">
         {projects.map((project) => (
