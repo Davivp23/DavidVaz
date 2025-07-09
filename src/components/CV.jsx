@@ -16,7 +16,7 @@ export default function CV() {
                 </p>
                 </section>
                 {/* Formación académica */}
-                <section className="my-12">
+                <section className="my-12 p-8 bg-[#0a0f1c] border-2 border-blue-500 rounded-2xl hover:border-orange-500 hover:shadow-[0_0_20px_#ff6b35aa] transition-all duration-300 group overflow-hidden">
                 <h2 className="pl-2 text-2xl font-semibold mb-4 text-blue-400">Formación académica</h2>
                 <p className="pl-2 text-gray-300">
                     Ciclo formativo de grado superior - Desarrollo de aplicaciones web &lt;DAW&gt;<br />
@@ -32,7 +32,7 @@ export default function CV() {
                 </p>
                 </section>
                 {/* Experiencia Profesional */}
-                <section className="my-12">
+                <section className="my-12 p-8 bg-[#0a0f1c] border-2 border-blue-500 rounded-2xl hover:border-orange-500 hover:shadow-[0_0_20px_#ff6b35aa] transition-all duration-300 group overflow-hidden">
                 <h2 className="pl-2 text-2xl font-semibold mb-4 text-blue-400">Experiencia profesional</h2>
                 <h3 className="pl-2 text-xl font-semibold mb-2 text-blue-400">Desarrollador Freelance - 2025</h3>
                 <p className="pl-2 text-gray-300">
@@ -48,7 +48,7 @@ export default function CV() {
                 </p>
                 </section>
                 {/* Habilidades técnicas */}
-                <section className="my-12">
+                <section className="my-12 p-8 bg-[#0a0f1c] border-2 border-blue-500 rounded-2xl hover:border-orange-500 hover:shadow-[0_0_20px_#ff6b35aa] transition-all duration-300 group overflow-hidden">
                 <h2 className="pl-2 text-2xl font-semibold mb-4 text-blue-400">Habilidades técnicas</h2>
                 <p className="pl-2 text-gray-300"> 
                     - Web: HTML, CSS, JavaScript, TypeScript, React, Next.js, Tailwind CSS <br />
@@ -58,7 +58,7 @@ export default function CV() {
                 </p>
                 </section>
                 {/* Idiomas */}
-                <section className="my-12">
+                <section className="my-12 p-8 bg-[#0a0f1c] border-2 border-blue-500 rounded-2xl hover:border-orange-500 hover:shadow-[0_0_20px_#ff6b35aa] transition-all duration-300 group overflow-hidden">
                 <h2 className="pl-2 text-2xl font-semibold mb-4 text-blue-400">Idiomas</h2>
                 <p className="pl-2 text-gray-300"> 
                     - Castellano: Nativo <br />
