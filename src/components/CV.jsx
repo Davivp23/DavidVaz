@@ -6,7 +6,7 @@ export default function CV() {
         <div>
             <Header />
             <main className="container mx-auto grid grid-flow-row auto-rows-max px-4">
-                <section className="my-12">
+                <section className="my-12 px-8 bg-[#0a0f1c] border-2 border-blue-500 rounded-2xl hover:border-orange-500 hover:shadow-[0_0_20px_#ff6b35aa] transition-all duration-300 group overflow-hidden">
                 {/* Sobre mí */}
                 <h2 className="pl-2 text-2xl font-semibold mb-4 text-blue-400">Sobre mí</h2>
                 <p className="pl-2 text-gray-300">Mi nombre es David y soy estudiante y 
