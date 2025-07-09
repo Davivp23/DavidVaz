@@ -12,12 +12,12 @@ export default function Header() {
 
         {/* Navegación */}
         <nav className="hidden md:flex items-center space-x-4">
-          <a
-            href="#portafolio"
+          <Link
+            to={'/'}
             className="text-sm font-medium text-gray-300 hover:text-blue-400 transition-colors"
           >
-            Proyectos
-          </a>
+            Portafolio
+          </Link>
           <Link
             to={'/cv'}
             className="text-sm font-medium text-gray-300 hover:text-blue-400 transition-colors"

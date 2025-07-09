@@ -88,7 +88,7 @@ export default function CV() {
                     </div>
                 </div>
                 {/* A demás */}
-                <section className="flex flex-col justify-center mt-12 mb-6 p-8 bg-[#0a0f1c] border-2 border-blue-500 rounded-2xl hover:border-orange-500 hover:shadow-[0_0_20px_#ff6b35aa] transition-all duration-300 group overflow-hidden">
+                <section className="flex flex-col justify-center mt-6 mb-6 p-8 bg-[#0a0f1c] border-2 border-blue-500 rounded-2xl hover:border-orange-500 hover:shadow-[0_0_20px_#ff6b35aa] transition-all duration-300 group overflow-hidden">
                 <h2 className="pl-2 text-2xl font-semibold mb-4 text-blue-400">A demás</h2>
                 <p className="pl-2 text-gray-300">
                     A demás de la programación, me gustan muchas otras cosas: <br />
