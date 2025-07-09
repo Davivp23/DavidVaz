@@ -5,7 +5,7 @@ export default function CV() {
     return (
         <div>
             <Header />
-            <main className="container mx-auto flex flex-col md:flex-row px-4">
+            <main className="container mx-auto grid grid-flow-row auto-rows-max px-4">
                 <section className="my-12">
                 {/* Sobre mí */}
                 <h2 className="pl-2 text-2xl font-semibold mb-4 text-blue-400">Sobre mí</h2>
