@@ -18,7 +18,7 @@ export default function CV() {
                 </section>
                 <div className="flex md:flex-row flex-col justify-between items-stretch h-full gap-4">
                     {/* Contenedor izquierdo */}
-                    <div className="w-full md:w-2/3 flex flex-col justify-between h-full flex-1 gap-4">
+                    <div className="w-full md:flex-[2] flex flex-col justify-between h-full flex-1 gap-4">
                         {/* Formación académica */}
                         <section className="flex-1 p-8 bg-[#0a0f1c] border-2 border-blue-500 rounded-2xl 
                                             hover:border-orange-500 hover:shadow-[0_0_20px_#ff6b35aa] 
@@ -59,7 +59,7 @@ export default function CV() {
                     </div>
 
                     {/* Contenedor derecho */}
-                    <div className="w-full md:w-1/3 flex flex-col justify-between h-full flex-1 gap-4">
+                    <div className="w-full md:flex-[1] flex flex-col justify-between h-full flex-1 gap-4">
                         {/* Lenguajes */}
                         <section className="flex-1 p-8 bg-[#0a0f1c] border-2 border-blue-500 rounded-2xl 
                                             hover:border-orange-500 hover:shadow-[0_0_20px_#ff6b35aa] 
