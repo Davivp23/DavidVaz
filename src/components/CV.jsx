@@ -71,7 +71,7 @@ export default function CV() {
                             - Castellano: Nativo <br />
                             - Catalán: Nativo <br />
                             - Inglés: Fluido (oral y escrito) <br />
-                            - Alemán: A2 <br /> <br />
+                            - Alemán: A2 <br />
                         </p>
                         </section>
                     </div>
