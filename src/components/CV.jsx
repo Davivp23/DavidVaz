@@ -52,7 +52,7 @@ export default function CV() {
                     </p>
                     </section>
 
-                    <div className="flex flex-col justify-between items-center h-[50%]">
+                    <div className="flex flex-col justify-between items-center">
                         {/* Habilidades técnicas */}
                         <section className="mb-6 p-8 bg-[#0a0f1c] border-2 border-blue-500 rounded-2xl hover:border-orange-500 hover:shadow-[0_0_20px_#ff6b35aa] transition-all duration-300 group overflow-hidden">
                         <h2 className="pl-2 text-2xl font-semibold mb-4 text-blue-400">Habilidades técnicas</h2>
