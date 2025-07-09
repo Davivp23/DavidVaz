@@ -6,8 +6,8 @@ export default function CV() {
         <div>
             <Header />
             <main className="container mx-auto grid grid-flow-row auto-rows-max px-4">
-                <section className="my-12 p-8 bg-[#0a0f1c] border-2 border-blue-500 rounded-2xl hover:border-orange-500 hover:shadow-[0_0_20px_#ff6b35aa] transition-all duration-300 group overflow-hidden">
                 {/* Sobre mí */}
+                <section className="my-12 p-8 bg-[#0a0f1c] border-2 border-blue-500 rounded-2xl hover:border-orange-500 hover:shadow-[0_0_20px_#ff6b35aa] transition-all duration-300 group overflow-hidden">
                 <h2 className="pl-2 text-2xl font-semibold mb-4 text-blue-400">Sobre mí</h2>
                 <p className="pl-2 text-gray-300">Mi nombre es David y soy estudiante y 
                     programador. <br />
@@ -19,12 +19,12 @@ export default function CV() {
                 <section className="my-12 p-8 bg-[#0a0f1c] border-2 border-blue-500 rounded-2xl hover:border-orange-500 hover:shadow-[0_0_20px_#ff6b35aa] transition-all duration-300 group overflow-hidden">
                 <h2 className="pl-2 text-2xl font-semibold mb-4 text-blue-400">Formación académica</h2>
                 <p className="pl-2 text-gray-300">
-                    Ciclo formativo de grado superior - Desarrollo de aplicaciones web &lt;DAW&gt;<br />
-                    Universitat Oberta de Catalunya &lt;UOC&gt; - 2/2025-Presente <br /> <br />
+                    Ciclo formativo de grado superior - Desarrollo de aplicaciones web (DAW)<br />
+                    Universitat Oberta de Catalunya (UOC); - 2/2025-Presente <br /> <br />
                 </p>
                 <p className="pl-2 text-gray-300">
                     Ingeniería en telecomunicaciones<br />
-                    Universitat Politècnica de Catalunya &lt;UPC&gt; - 9/2022-1/2025 <br /> <br />
+                    Universitat Politècnica de Catalunya (UPC) - 9/2022-1/2025 <br /> <br />
                 </p>
                 <p className="pl-2 text-gray-300">
                     Bachillerato científico-tecnológico<br />
@@ -58,12 +58,12 @@ export default function CV() {
                 </p>
                 </section>
                 {/* Idiomas */}
-                <section className="my-12 p-8 bg-[#0a0f1c] border-2 border-blue-500 rounded-2xl hover:border-orange-500 hover:shadow-[0_0_20px_#ff6b35aa] transition-all duration-300 group overflow-hidden">
+                <section className="my-12">
                 <h2 className="pl-2 text-2xl font-semibold mb-4 text-blue-400">Idiomas</h2>
                 <p className="pl-2 text-gray-300"> 
                     - Castellano: Nativo <br />
                     - Catalán: Nativo <br />
-                    - Inglés: Fluido &lt;oral y escrito&gt; <br />
+                    - Inglés: Fluido (oral y escrito) <br />
                     - Alemán: A2 <br /> <br />
                 </p>
                 </section>
