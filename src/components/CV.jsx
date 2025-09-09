@@ -26,7 +26,7 @@ export default function CV() {
                         <h2 className="pl-2 text-2xl font-semibold mb-4 text-blue-400 flex flex-col justify-center">Formación académica</h2>
                             <p className="pl-2 text-gray-300">
                                 Ciclo formativo de grado superior - Desarrollo de aplicaciones web (DAW)<br />
-                                Universitat Oberta de Catalunya (UOC); - 2/2025-Presente <br /> <br />
+                                Universitat Oberta de Catalunya (UOC) - 2/2025-Presente <br /> <br />
                             </p>
                             <p className="pl-2 text-gray-300">
                                 Ingeniería en telecomunicaciones<br />
