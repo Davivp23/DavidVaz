@@ -66,7 +66,7 @@ export default function Home() {
         {/* No más columnas */}
         <div className="w-full">
           <BabyProjects ref={projectsRef} />
-          <Contact />
+          {/* <Contact /> */}
         </div>
       </main>
     </div>
