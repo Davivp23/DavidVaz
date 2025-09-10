@@ -25,7 +25,7 @@ export default function Header() {
             Currículum
           </Link>
           <a
-            href="github.com/Davivp23/"
+            href="https://github.com/Davivp23/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-sm font-medium text-gray-300 hover:text-blue-400 transition-colors"
