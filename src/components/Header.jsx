@@ -43,7 +43,7 @@ export default function Header() {
           <button
             onClick={() => setDarkMode(!darkM)}
             className="px-3 py-1 rounded border dark:border-white">
-            {darkMode ? "☀️" : "🌙"}
+            {darkM ? "☀️" : "🌙"}
           </button>
         </nav>
       </div>
