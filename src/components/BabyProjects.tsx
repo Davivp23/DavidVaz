@@ -13,7 +13,7 @@ const Projects = forwardRef<HTMLElement, { onHover?: (project: any) => void }>((
       <p className="pl-2 text-gray-300 dark:text-gray-600 transition-all duration-300">
         (Tarjetas no interactivas)<br />
       </p>
-      <div className="w-full flex flex-col md:flex-wrap md:flex-row gap-8 p-5">
+      <div className="flex md:flex-row flex-col justify-between items-stretch h-full gap-4">
         {projects.map((project) => (
           <Card
             key={project.id}
