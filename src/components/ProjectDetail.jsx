@@ -9,7 +9,7 @@ export default function ProjectDetail() {
 
   if (!project) {
     return (
-      <div className="text-center py-20 text-gray-400">
+      <div className="text-center py-20 text-gray-300 dark:text-gray-600 transition-all duration-300">
         <p>Proyecto no encontrado.</p>
         <Link to="/" className="text-blue-400 underline mt-4 block">&larr; Volver al inicio</Link>
       </div>
@@ -49,8 +49,8 @@ export default function ProjectDetail() {
 
           {/* Columna derecha */}
           <div className="relative md:w-1/2 w-full flex-col items-center justify-center">
-            <p className="text-gray-300 mb-4 mt-5">{project.description}</p>
-            <p className="text-gray-400 mb-4">
+            <p className="dark:text-gray-600 transition-all duration-300 text-gray-300 mb-4 mt-5">{project.description}</p>
+            <p className="dark:text-gray-600 transition-all duration-300 text-gray-300 mb-4">
               <strong>Tecnologías usadas:</strong> {project.technologies.join(', ')}
             </p>
           </div>

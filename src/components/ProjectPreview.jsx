@@ -61,7 +61,7 @@ export default function ProjectPreview({ project }) {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 10 }}
           transition={{ duration: 0.3 }}
-          className="text-gray-600 italic text-center px-4"
+          className="dark:text-gray-600 transition-all duration-300 text-gray-600 italic text-center px-4"
         >
           Pasa el cursor por un proyecto para una demo interactiva
         </motion.div>
