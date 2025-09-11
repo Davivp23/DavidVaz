@@ -12,7 +12,7 @@ export default function CV() {
                 <h2 className="pl-2 text-2xl font-semibold mb-4 text-blue-400">Sobre mí</h2>
                 <p className="pl-2 text-gray-300">Mi nombre es David y soy estudiante y 
                     programador. <br />
-                    Trabajador y con muchas ganas de participar en proyectos que me ayuden a crecer como profesional. 
+                    Soy trabajador y tengo muchas ganas de participar en proyectos que me ayuden a crecer como profesional. 
                     Me motiva aprender constantemente y aportar soluciones creativas y eficientes.<br />
                 </p>
                 </section>
