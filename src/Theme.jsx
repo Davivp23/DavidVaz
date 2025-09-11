@@ -7,7 +7,7 @@ export function ThemeProv({ children }) {
         if (localStorage.getItem("theme")) {
             return localStorage.getiItem("theme") === "dark";
         }
-        return window.watchMedia("(prefers-color-scheme: dark)").matches;
+        return window.matchMedia("(prefers-color-scheme: dark)").matches;
     });
 
     useEffect(() => {
