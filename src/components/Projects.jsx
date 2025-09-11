@@ -12,7 +12,8 @@ const Projects = forwardRef(({ onHover }, ref) => {
         {projects.map((project) => (
           <Link
             key={project.id}
-            to={`/proyecto/${project.id}`}
+            // to={`/proyecto/${project.id}`}
+            to={`/`}
             onMouseEnter={() => onHover(project)}
             className="block p-4 dark:bg-[#d2d7ee] bg-[#0a0f1c] border-2 border-blue-500 rounded-2xl hover:border-orange-500 hover:shadow-[0_0_20px_#ff6b35aa] transition-all duration-300">
             <h3 className="text-xl font-bold text-blue-300 dark:text-blue-400 transition-all duration-300" style={{ marginBottom: '1vh' }}>{project.title}</h3>
