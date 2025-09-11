@@ -37,9 +37,9 @@ const Projects = forwardRef<HTMLElement, { onHover?: (project: any) => void }>((
             </CardHeader>
             <CardContent className="p-6">
               {/* Gracias Chage */}
-              <CardTitle className="font-headline text-2xl mb-2">{project.title}</CardTitle>
-              <CardDescription>{project.description}</CardDescription>
-              <CardDescription className="mt-4 text-sm text-blue-300/80 dark:text-blue-400 transition-all duration-300">{project.technologies.join(', ')}</CardDescription>
+              <CardTitle className="text-xl font-bold text-blue-300 dark:text-blue-400 transition-all duration-300">{project.title}</CardTitle>
+              <CardDescription className="dark:text-gray-600 transition-all duration-300 text-gray-300 whitespace-pre-line">{project.description}</CardDescription>
+              <CardDescription className="dark:text-gray-600 transition-all duration-300 text-gray-300 whitespace-pre-line">{project.technologies.join(', ')}</CardDescription>
             </CardContent>
           </Card>
         ))}
