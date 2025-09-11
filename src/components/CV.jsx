@@ -3,12 +3,12 @@ import Header from './Header';
 
 export default function CV() {
     return (
-        <div className="dark:bg-[#f0f0f0] bg-[#0d1117] text-white min-h-screen font-sans">
+        <div className="dark:bg-[#f0f0f0] transition-all duration-300 bg-[#0d1117] text-white min-h-screen font-sans">
             <Header />
             <main className="container mx-auto grid grid-flow-row auto-rows-max px-4">
 
                 {/* Sobre mí */}
-                <section className="flex flex-col justify-center mt-12 mb-6 p-8 bg-[#0a0f1c] border-2 border-blue-500 rounded-2xl hover:border-orange-500 hover:shadow-[0_0_20px_#ff6b35aa] transition-all duration-300 group overflow-hidden">
+                <section className="dark:bg-[#d2d7ee] flex flex-col justify-center mt-12 mb-6 p-8 bg-[#0a0f1c] border-2 border-blue-500 rounded-2xl hover:border-orange-500 hover:shadow-[0_0_20px_#ff6b35aa] transition-all duration-300 group overflow-hidden">
                 <h2 className="pl-2 text-2xl font-semibold mb-4 text-blue-400">Sobre mí</h2>
                 <p className="pl-2 text-gray-300">Mi nombre es David y soy estudiante y 
                     programador. <br />
