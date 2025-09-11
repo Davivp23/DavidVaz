@@ -42,7 +42,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="dark:bg-[#f0f0f0] bg-[#0d1117] text-white min-h-screen font-sans">
+    <div className="dark:bg-[#f0f0f0] transition-all duration-300 bg-[#0d1117] text-white min-h-screen font-sans">
       <Header />
       <main className="container mx-auto flex flex-col md:flex-row px-4">
         {/* Columna izquierda */}
