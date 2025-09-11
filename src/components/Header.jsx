@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { useTheme } from '../Theme'
 
 export default function Header() {
+  const { darkM, setDarkM } = useTheme();
+
   return (
     <header className="sticky top-0 z-40 w-full border-b border-[#fa7524] bg-[#0d1117]">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
