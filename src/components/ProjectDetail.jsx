@@ -11,7 +11,7 @@ export default function ProjectDetail() {
     return (
       <div className="text-center py-20 text-gray-300 dark:text-gray-600 transition-all duration-300">
         <p>Proyecto no encontrado.</p>
-        <Link to="/" className="text-blue-400 underline mt-4 block">&larr; Volver al inicio</Link>
+        <Link to="/" className="text-blue-400 dark:text-blue-500 transition-all duration-300 underline mt-4 block">&larr; Volver al inicio</Link>
       </div>
     );
   }
@@ -21,7 +21,7 @@ export default function ProjectDetail() {
     <div>
     <Header />
       <main className="container mx-auto flex flex-col md:flex-col px-4">
-        <h1 className="pl-2 text-3xl font-bold mt-6 text-blue-400">{project.title}</h1>
+        <h1 className="pl-2 text-3xl font-bold mt-6 text-blue-400 dark:text-blue-500 transition-all duration-300">{project.title}</h1>
         <div className="bg-[#0d1117] text-white min-h-screen px-4 py-10 flex md:flex-row">
           {/* Columna izquierda */}
           <div className="md:w-1/2 w-full md:pr-8">

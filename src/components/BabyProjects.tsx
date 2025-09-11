@@ -9,7 +9,7 @@ const Projects = forwardRef<HTMLElement, { onHover?: (project: any) => void }>((
 
   return (
     <section ref={ref} className="py-10">
-      <h2 className="pl-2 text-2xl font-semibold mb-4 text-blue-400">Proyectos pequeños</h2>
+      <h2 className="pl-2 text-2xl font-semibold mb-4 text-blue-400 dark:text-blue-500 transition-all duration-300">Proyectos pequeños</h2>
       <p className="pl-2 text-gray-300 dark:text-gray-600 transition-all duration-300">
         (Tarjetas no interactivas)<br />
       </p>

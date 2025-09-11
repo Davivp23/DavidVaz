@@ -5,7 +5,7 @@ import projects from '../data/projects';
 const Projects = forwardRef(({ onHover }, ref) => {
   return (
     <section ref={ref} className="py-10">
-      <h2 className="pl-2 text-2xl font-semibold mb-4 text-blue-400">Proyectos</h2>
+      <h2 className="pl-2 text-2xl font-semibold mb-4 text-blue-400 dark:text-blue-500 transition-all duration-300">Proyectos</h2>
       <p className="pl-2 text-gray-300 dark:text-gray-600 transition-all duration-300">
         Pulsa en uno para más información o pon el ratón encima para una demo interactiva (solo pc).</p>
       <div className="flex flex-col gap-6">
