@@ -3,7 +3,7 @@ import Header from './Header';
 
 export default function CV() {
     return (
-        <div>
+        <div className="bg-[#0d1117] text-white min-h-screen font-sans">
             <Header />
             <main className="container mx-auto grid grid-flow-row auto-rows-max px-4">
 
