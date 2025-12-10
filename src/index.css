@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    --blanco-roto: #F0EDE9;
+    --azul-oscuro: #1e3653;
+    --azul-grisaceo: #bccad1;
+}
+
+@theme "dark" {
+    --color-blanco-roto: #F0EDE9;
+    --color-azul-oscuro: #1e3653;
+    --color-azul-grisaceo: #bccad1;
+}
+
+@theme "light" {
+    --color-blanco-roto: #F0EDE9;
+    --color-azul-oscuro: #1e3653;
+    --color-azul-grisaceo: #bccad1;
+}
