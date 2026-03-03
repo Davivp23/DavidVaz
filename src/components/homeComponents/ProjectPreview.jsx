@@ -15,13 +15,6 @@ export default function ProjectPreview({ project }) {
       //   url: 'https://generadorlineal.onrender.com',
       // };
 
-      const iframe = document.createElement('iframe');
-      iframe.src = slowProject.url;
-      iframe.style.display = 'none';
-      iframe.loading = 'eager';
-      iframe.sandbox = "allow-same-origin allow-scripts allow-popups";
-      document.body.appendChild(iframe);
-
       return () => {
         document.body.removeChild(iframe);
       };
