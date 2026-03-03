@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+@import 'tailwindcss';
+
+@custom-variant dark (&:is(.dark *));
+
+@layer base {
+
+    html,
+    body {
+        font-family: 'Outfit', sans-serif;
+    }
+
+    *,
+    ::after,
+    ::before,
+    ::backdrop,
+    ::file-selector-button {
+        border-color: var(--color-gray-200, currentcolor);
+    }
+}
+
+@layer utilities {
+    :root {
+        --color-foreground: #1e3653;
+        --color-background: #bccad1;
+        --color-contraste: #bccad1;
+        --color-blanco-roto: #f0ede9;
+        --color-azul-oscuro: #1e3653;
+        --color-azul-grisaceo: #bccad1;
+    }
+}
+
+@layer utilities {
+    .dark {
+        --color-foreground: #bccad1;
+        --color-background: #1e3653;
+        --color-contraste: #1e3653;
+    }
+}
+
+@theme {
+    --color-background: var(--color-background);
+    --color-foreground: var(--color-foreground);
+    --color-contraste: var(--color-contraste);
+    --color-contraste-inverso: var(--color-contraste-inverso);
+    --color-blanco-roto: var(--color-blanco-roto);
+    --color-azul-oscuro: var(--color-azul-oscuro);
+    --color-azul-grisaceo: var(--color-azul-grisaceo);
+}
