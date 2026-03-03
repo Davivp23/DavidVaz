@@ -15,7 +15,7 @@ export default function About() {
       </TitleBar>
 
       <div className="w-full h-auto flex flex-row">
-        <p className="text-lg leading-relaxed text-foreground transition-all duration-300 max-w-2xl px-2 opacity-90 w-1/2">
+        <p className="text-lg leading-relaxed text-foreground transition-all duration-300 max-w-2xl px-2 opacity-90 w-full md:w-1/2">
           ¡Hola! <br />
           Me llamo David y aquí podrás ver varios de los proyectos que he ido haciendo a lo largo de mi vida. <br />
           Desde pequeño me han gustado las tecnologías en general, pero principalmente la programación.

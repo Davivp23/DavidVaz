@@ -20,7 +20,7 @@ const Projects = forwardRef(({ onHover }, ref) => {
             <Link
               to={`/proyecto/${project.id}`}
               onMouseEnter={() => onHover(project)}
-              className="mb-[80vh] group flex flex-col justify-between p-8 bg-foreground rounded-3xl shadow-sm border border-transparent hover:border-contraste/50 hover:shadow-xl transition-all duration-500 hover:-translate-y-1 relative overflow-hidden"
+              className="mb-8 md:mb-[80vh] group flex flex-col justify-between p-8 bg-foreground rounded-3xl shadow-sm border border-transparent hover:border-contraste/50 hover:shadow-xl transition-all duration-500 hover:-translate-y-1 relative overflow-hidden"
             >
               <div className="absolute top-0 right-0 p-8 opacity-0 group-hover:opacity-100 transition-duration-300 transform translate-x-4 group-hover:translate-x-0">
                 <ChevronRight className="w-8 h-8 text-contraste" />
