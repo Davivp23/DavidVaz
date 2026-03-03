@@ -13,7 +13,7 @@ const projects = [
     description: 'Una sencilla web que uso como homepage con herramientas e información de mi servidor.',
     url: 'https://vaznet.ssh.cx/',
     image: 'https://pbs.twimg.com/media/GvXhVn0WkAAdDw3?format=png&name=900x900',
-    technologies: ['Python', 'streamlit', 'matplotlib'],
+    technologies: ['React', 'Vite', 'Docker', 'Caddy', 'API REST/POST', 'SocketIO'],
   },
   {
     id: 'portafolio',
